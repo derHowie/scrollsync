@@ -4,6 +4,8 @@ A reagent component for managing scroll events powered by core.async.
 
 ## Usage
 
+[![Clojars Project](https://img.shields.io/clojars/v/scrollsync.svg)](https://clojars.org/scrollsync)
+
 Scrollsync fires events based on the positioning of a collection of elements with respect to the browser window.
 
 ```clojure
