@@ -4,7 +4,7 @@ A reagent component for managing scroll events powered by core.async.
 
 ## Usage
 
-Scrollsync fires events based on the positioning of a collection of specified elements with respect to the browser window.
+Scrollsync fires events based on the positioning of a collection of elements with respect to the browser window.
 
 ```clojure
 (:require [reagent.core :as r]
@@ -61,7 +61,8 @@ the data passed to `bp-fn` when the breakpoint is reached
 
 the offset at which the element's breakpoint is triggered (an offset of 0 would fire an event when the top of the element reaches the top of the viewport)
 
-### :content `component`
+### :content
+`component`
 
 scrollsync's child element
 
