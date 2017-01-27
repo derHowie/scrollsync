@@ -1,5 +1,5 @@
-(defproject scrollsync "0.1.0-SNAPSHOT"
-  :description "A Reagent Component for custom scroll events."
+(defproject scrollsync "0.1.0"
+  :description "A Reagent Component for managing scroll events."
   :url "http://github.com/derhowie/scrollsync"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
@@ -11,6 +11,8 @@
                  [org.clojure/core.async "0.2.391"
                   :exclusions [org.clojure/tools.reader]]
                  [reagent "0.6.0"]]
+
+  :deploy-repositories [["releases" :clojars]] 
 
   :plugins [[lein-figwheel "0.5.8"]
             [lein-cljsbuild "1.1.4" :exclusions [[org.clojure/clojure]]]]
