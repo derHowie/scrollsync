@@ -83,4 +83,4 @@
                                          (swap! scrollsync-state assoc :handler (create-bp-handler new-bps c))
                                          (scrollsync!)))
        :reagent-render (fn [& {:keys [breakpoints bp-fn content]}]
-                         [:div (content)])})))
+                         [:div content])})))
