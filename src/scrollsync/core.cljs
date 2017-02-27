@@ -31,8 +31,8 @@
   [bps]
   (reduce
     (fn [a b]
-      (if (< (get-offset-diff a)
-             (get-offset-diff b))
+      (if (> (get-offset-diff (:pos a))
+             (get-offset-diff (:pos b)))
         a b))
     (get-broken-bps bps)))
 

@@ -1,4 +1,4 @@
-(defproject scrollsync "0.1.0"
+(defproject scrollsync "0.3.0"
   :description "A Reagent Component for managing scroll events."
   :url "http://github.com/derhowie/scrollsync"
   :license {:name "Eclipse Public License"
