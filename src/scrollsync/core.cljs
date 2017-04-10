@@ -70,10 +70,9 @@
                       (let [chan (scroll->chan js/window c scrollsync-state)]
                         (go (while true
                               (let [params (<! chan)]
-                                (if (not= params (:last-params @scrollsync-state))
-                                  (do
-                                    (bp-fn params)
-                                    (swap! scrollsync-state assoc :last-params params))))))))]
+                                (when (not= params (:last-params @scrollsync-state))
+                                  (bp-fn params)
+                                  (swap! scrollsync-state assoc :last-params params)))))))]
     (r/create-class
       {:component-did-mount #(scrollsync!)
        :component-will-unmount #(.removeEventListener js/window "scroll" (:handler @scrollsync-state))
